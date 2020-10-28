@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using FI.AtividadeEntrevista.DML;
+using WebAtividadeEntrevista.Validate;
 
 namespace WebAtividadeEntrevista.Controllers
 {
@@ -113,7 +114,7 @@ namespace WebAtividadeEntrevista.Controllers
                     Nacionalidade = cliente.Nacionalidade,
                     Nome = cliente.Nome,
                     Sobrenome = cliente.Sobrenome,
-                    CPF = model.CPF,
+                    CPF = cliente.CPF,
                     Telefone = cliente.Telefone
                 };
 

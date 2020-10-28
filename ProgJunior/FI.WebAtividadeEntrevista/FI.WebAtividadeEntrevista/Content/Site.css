@@ -9,3 +9,6 @@
     padding-right: 15px;
 }
 
+.formError {
+    color: red;
+}
