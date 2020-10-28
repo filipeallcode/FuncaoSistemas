@@ -68,6 +68,7 @@ namespace WebAtividadeEntrevista.Models
         /// </summary>
         [Required]
         [ValidaCPF(ErrorMessage = "CPF inválido")]
+        [VerificaCPFExistente(ErrorMessage = "CPF já cadastrado")]
         public string CPF { get; set; }
 
         /// <summary>

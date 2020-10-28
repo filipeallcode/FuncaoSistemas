@@ -10,7 +10,6 @@ namespace WebAtividadeEntrevista.Validate
 {
     public class ValidaCPF : ValidationAttribute
     {
-        public string CPF { get; }
         public ValidaCPF()
         {
             

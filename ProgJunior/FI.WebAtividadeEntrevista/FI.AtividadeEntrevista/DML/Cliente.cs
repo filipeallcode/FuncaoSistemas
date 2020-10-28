@@ -57,13 +57,13 @@ namespace FI.AtividadeEntrevista.DML
         public string Sobrenome { get; set; }
 
         /// <summary>
-        /// Sobrenome
-        /// </summary>
-        public string CPF { get; set; }
-
-        /// <summary>
         /// Telefone
         /// </summary>
-        public string Telefone { get; set; }        
+        public string Telefone { get; set; }
+
+        /// <summary>
+        /// CPF
+        /// </summary>
+        public string CPF { get; set; }
     }    
 }
