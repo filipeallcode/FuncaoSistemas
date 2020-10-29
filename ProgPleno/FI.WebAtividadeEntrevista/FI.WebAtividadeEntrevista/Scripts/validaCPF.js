@@ -1,8 +1,16 @@
-﻿function ValidaCPF() {
-
-    var strCPF = document.getElementById("CPF").value.replace(/[^\w\s]/gi, '');
+﻿function ValidaCPF(elementName) {
+    var elementId = elementName.id
+    var elementErrorId = "";
+    var strCPF = document.getElementById(elementId).value.replace(/[^\w\s]/gi, '');
     var Soma;
     var Resto;
+
+
+    if (elementId == "CPF") {
+        elementErrorId = "errorCPF";
+    } else if (elementId == "CPFBeneficiario") {
+        elementErrorId = "errorCPFBeneficiario"
+    }
 
     if (strCPF == "") {
         console.log("CPF vazio.");
@@ -44,13 +52,12 @@
         return false;
     }
 
-    document.getElementById("errorCPF").innerHTML = "";
+    document.getElementById(elementErrorId).innerHTML = "";
     return true;
-}
 
-function MessageAlert(value) {
-    if (value == false) {
-        document.getElementById("errorCPF").innerHTML = "Digite um CPF válido.";
-        document.getElementById("CPF").focus();
+    function MessageAlert(value) {
+        if (value == false) {
+            document.getElementById(elementErrorId).innerHTML = "Digite um CPF válido.";
+        }
     }
 }

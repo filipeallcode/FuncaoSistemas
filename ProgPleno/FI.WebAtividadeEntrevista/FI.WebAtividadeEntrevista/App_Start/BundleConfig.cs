@@ -46,6 +46,9 @@ namespace WebAtividadeEntrevista
             bundles.Add(new ScriptBundle("~/bundles/validaCPF").Include(
             "~/Scripts/validaCPF.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/listBeneficiarios").Include(
+                      "~/Scripts/Beneficiarios/FI.ListBeneficiarios.js"));
+
         }
     }
 }

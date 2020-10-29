@@ -8,6 +8,7 @@
             $("#Telefone").inputmask("mask", { "mask": "(99) 9999-99999" });
             $("#CPF").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
             $("#CEP").inputmask("mask", { "mask": "99999-999" });
+            $("#CPFBeneficiario").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
         });
         var urlPost = '@Url.Action("Alterar", "Cliente", new { area = "" })';
         var obj = @Html.Raw(Json.Encode(Model));
@@ -15,7 +16,9 @@
     </script>
     @Scripts.Render("~/bundles/altClientes")
     @Scripts.Render("~/bundles/inputmask")
+    @Scripts.Render("~/bundles/listBeneficiarios")
     @Scripts.Render("~/bundles/validaCPF")
 }
 <h2>@Html.Raw(ViewBag.Title)</h2>
 @Html.Partial("Forms")
+@Html.Partial("~/Views/Beneficiario/Gerenciar.cshtml")

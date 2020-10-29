@@ -26,11 +26,13 @@ namespace WebAtividadeEntrevista.Validate
             int soma;
             int resto;
 
+            if (cpf.Length < 11)
+                return ErrorMessage;
+
             // Verifica se todos os dígitos são iguais
             if (cpf.All(c => c.Equals(cpf.First())))
                 return ErrorMessage;
 
-            // Verifica se CPF é vazio
             if (cpf == "")
                 return ErrorMessage;
 
