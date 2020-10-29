@@ -1,42 +1,37 @@
 ﻿
-$(document).ready(function () {
-
-    if (document.getElementById("gridBeneficiarios"))
-        HTMLDocument.
-        $('#gridBeneficiarios').jtable({
-            title: 'Beneficiarios',
-            paging: true, //Enable paging
-            pageSize: 5, //Set page size (default: 10)
-            sorting: true, //Enable sorting
-            defaultSorting: 'Nome ASC', //Set default sorting
-            actions: {
-                listAction: urlClienteList,
+function PesqBeneficiario() {
+    
+    $('#gridBeneficiarios').jtable({
+        paging: true, //Enable paging
+        pageSize: 5, //Set page size (default: 10)
+        sorting: true, //Enable sorting
+        defaultSorting: 'Nome ASC', //Set default sorting
+        actions: {
+            listAction: urlBeneficiarioList,
+        },
+        fields: {
+            CPF: {
+                title: 'CPF',
+                width: '40%'
             },
-            fields: {
-                Nome: {
-                    title: 'CPF',
-                    width: '40%'
-                },
-                Email: {
-                    title: 'Nome',
-                    width: '40%'
-                },
-                Alterar: {
-                    title: '',
-                    display: function (data) {
-                        return '<button onclick="window.location.href=\'' + urlAlteracao + '/' + data.record.Id + '\'" class="btn btn-primary btn-sm">Alterar</button>';
-                    }
-                },
-                Excluir: {
-                    title: '',
-                    display: function (data) {
-                        return '<button onclick="window.location.href=\'' + urlAlteracao + '/' + data.record.Id + '\'" class="btn btn-primary btn-sm">Excluir</button>';
-                    }
+            Nome: {
+                title: 'Nome',
+                width: '40%'
+            },
+            Alterar: {
+                title: '',
+                display: function (data) {
+                    return '<button class="btn btn-primary btn-sm">Alterar</button>';
+                }
+            },
+            Excluir: {
+                title: '',
+                display: function (data) {
+                    return '<button class="btn btn-primary btn-sm">Excluir</button>';
                 }
             }
-        });
+        }
+    });
 
-    //Load student list from server
-    if (document.getElementById("gridBeneficiarios"))
-        $('#gridBeneficiarios').jtable('load');
-})
+    $('#gridBeneficiarios').jtable('load');
+}

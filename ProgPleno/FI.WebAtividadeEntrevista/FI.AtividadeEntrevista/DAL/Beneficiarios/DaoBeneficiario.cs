@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FI.AtividadeEntrevista.BLL;
 using FI.AtividadeEntrevista.DML;
 
 namespace FI.AtividadeEntrevista.DAL
@@ -23,6 +24,7 @@ namespace FI.AtividadeEntrevista.DAL
             
             parametros.Add(new System.Data.SqlClient.SqlParameter("Nome", beneficiario.Nome));
             parametros.Add(new System.Data.SqlClient.SqlParameter("CPF", beneficiario.CPF));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("IdCliente", beneficiario.IdCliente));
 
             DataSet ds = base.Consultar("FI_SP_IncBeneficiario", parametros);
             long ret = 0;

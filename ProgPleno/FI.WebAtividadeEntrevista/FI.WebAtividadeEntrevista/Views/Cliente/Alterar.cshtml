@@ -12,16 +12,17 @@
             $("#CPFBeneficiario").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
         });
         var urlPostCliente = '@Url.Action("Alterar", "Cliente", new { area = "" })';
-        var urlPostBeneficiario = '@Url.Action("Alterar", "Beneficiario", new { area = "" })';
+        var urlPostBeneficiario = '@Url.Action("Incluir", "Beneficiario", new { area = "" })';
         var objCliente = @Html.Raw(Json.Encode(Model));
-        var objBeneficiario = @Html.Raw(Json.Encode(Model));
+        var idCliente = @Html.Raw(Json.Encode(Model.Id));
         var urlRetorno = '@Url.Action("Index", "Cliente", new { area = "" })';
         var urlAlteracao = '@Url.Action("Alterar", "Cliente", new { area = "" })';
-        var urlClienteList = '@Url.Action("ClienteList", "Cliente", new { area = "" })';
+        var urlBeneficiarioList = '@Url.Action("BeneficiarioList", "Beneficiario", new { area = "" })';
     </script>
     @Scripts.Render("~/bundles/altClientes")
     @Scripts.Render("~/bundles/inputmask")
     @Scripts.Render("~/bundles/listBeneficiarios")
+    @Scripts.Render("~/bundles/Beneficiarios")
     @Scripts.Render("~/bundles/validaCPF")
 }
 <h2>@Html.Raw(ViewBag.Title)</h2>

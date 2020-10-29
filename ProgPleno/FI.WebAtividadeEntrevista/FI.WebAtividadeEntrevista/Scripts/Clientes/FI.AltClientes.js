@@ -1,16 +1,16 @@
 ﻿
 $(document).ready(function () {
-    if (obj) {
-        $('#formCadastro #Nome').val(obj.Nome);
-        $('#formCadastro #CEP').val(obj.CEP);
-        $('#formCadastro #Email').val(obj.Email);
-        $('#formCadastro #Sobrenome').val(obj.Sobrenome);
-        $('#formCadastro #CPF').val(obj.CPF);
-        $('#formCadastro #Nacionalidade').val(obj.Nacionalidade);
-        $('#formCadastro #Estado').val(obj.Estado);
-        $('#formCadastro #Cidade').val(obj.Cidade);
-        $('#formCadastro #Logradouro').val(obj.Logradouro);
-        $('#formCadastro #Telefone').val(obj.Telefone);
+    if (objCliente) {
+        $('#formCadastro #Nome').val(objCliente.Nome);
+        $('#formCadastro #CEP').val(objCliente.CEP);
+        $('#formCadastro #Email').val(objCliente.Email);
+        $('#formCadastro #Sobrenome').val(objCliente.Sobrenome);
+        $('#formCadastro #CPF').val(objCliente.CPF);
+        $('#formCadastro #Nacionalidade').val(objCliente.Nacionalidade);
+        $('#formCadastro #Estado').val(objCliente.Estado);
+        $('#formCadastro #Cidade').val(objCliente.Cidade);
+        $('#formCadastro #Logradouro').val(objCliente.Logradouro);
+        $('#formCadastro #Telefone').val(objCliente.Telefone);
     }
 
     $('#formCadastro').submit(function (e) {

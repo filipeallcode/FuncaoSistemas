@@ -3,7 +3,7 @@ $(document).ready(function () {
     $('#formCadastro').submit(function (e) {
         e.preventDefault();
         $.ajax({
-            url: urlPost,
+            url: urlPostCliente,
             method: "POST",
             data: {
                 "NOME": $(this).find("#Nome").val(),

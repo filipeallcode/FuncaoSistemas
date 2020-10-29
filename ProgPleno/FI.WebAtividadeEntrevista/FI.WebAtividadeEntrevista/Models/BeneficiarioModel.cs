@@ -20,12 +20,14 @@ namespace WebAtividadeEntrevista.Models
         /// Nome
         /// </summary>
         [Required]
+        [MaxLength(50)]
         public string Nome { get; set; }
 
         /// <summary>
         /// CPF
         /// </summary>
         [Required]
+        [MaxLength(14)]
         public string CPF { get; set; }
     }
 }

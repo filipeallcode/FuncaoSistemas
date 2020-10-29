@@ -3,12 +3,12 @@ $(document).ready(function () {
     $('#formCadastroBeneficiario').submit(function (e) {
         e.preventDefault();
         $.ajax({
-            url: urlPost,
+            url: urlPostBeneficiario,
             method: "POST",
             data: {
                 "NOME": $(this).find("#NomeBeneficiario").val(),
                 "CPF": $(this).find("#CPFBeneficiario").val(),
-                "IDCLIENTE": $(this).find()
+                "IDCLIENTE": objCliente.Id
             },
             error:
             function (r) {

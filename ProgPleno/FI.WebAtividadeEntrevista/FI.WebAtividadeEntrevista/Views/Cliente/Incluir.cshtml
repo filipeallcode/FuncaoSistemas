@@ -8,17 +8,34 @@
             $("#Telefone").inputmask("mask", { "mask": "(99) 9999-99999" });
             $("#CPF").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
             $("#CEP").inputmask("mask", { "mask": "99999-999" });
-            $("#CPFBeneficiario").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
         });
         var urlPostCliente = '@Url.Action("Incluir", "Cliente", new { area = "" })';
-        var urlPostBeneficiario = '@Url.Action("Incluir", "Beneficiario", new { area = "" })';
 
     </script>
 
     @Scripts.Render("~/bundles/clientes")
-    @Scripts.Render("~/bundles/beneficiarios")
     @Scripts.Render("~/bundles/inputmask")
     @Scripts.Render("~/bundles/validaCPF")
 }
 <h2>@Html.Raw(ViewBag.Title)</h2>
 @Html.Partial("Forms")
+
+<div class="modal fade" id="beneficiariosModal" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>Beneficiários</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <p class="text-center">Finalize o cadastro do cliente para depois adicionar beneficiários</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
