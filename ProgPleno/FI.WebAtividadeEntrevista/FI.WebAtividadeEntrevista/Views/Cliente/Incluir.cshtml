@@ -8,11 +8,15 @@
             $("#Telefone").inputmask("mask", { "mask": "(99) 9999-99999" });
             $("#CPF").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
             $("#CEP").inputmask("mask", { "mask": "99999-999" });
+            $("#CPFBeneficiario").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
         });
-        var urlPost = '@Url.Action("Incluir", "Cliente", new { area = "" })';
+        var urlPostCliente = '@Url.Action("Incluir", "Cliente", new { area = "" })';
+        var urlPostBeneficiario = '@Url.Action("Incluir", "Beneficiario", new { area = "" })';
+
     </script>
-    
+
     @Scripts.Render("~/bundles/clientes")
+    @Scripts.Render("~/bundles/beneficiarios")
     @Scripts.Render("~/bundles/inputmask")
     @Scripts.Render("~/bundles/validaCPF")
 }

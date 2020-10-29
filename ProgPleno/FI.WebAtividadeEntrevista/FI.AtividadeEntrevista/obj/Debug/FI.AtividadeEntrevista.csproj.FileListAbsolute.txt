@@ -22,3 +22,9 @@ E:\Projects\FuncaoSistemas\ProgJunior\FI.WebAtividadeEntrevista\FI.AtividadeEntr
 E:\Projects\FuncaoSistemas\ProgJunior\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
 E:\Projects\FuncaoSistemas\ProgJunior\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.dll
 E:\Projects\FuncaoSistemas\ProgJunior\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.pdb
+E:\Projects\FuncaoSistemas\ProgPleno\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\bin\Debug\FI.AtividadeEntrevista.dll
+E:\Projects\FuncaoSistemas\ProgPleno\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\bin\Debug\FI.AtividadeEntrevista.pdb
+E:\Projects\FuncaoSistemas\ProgPleno\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csprojAssemblyReference.cache
+E:\Projects\FuncaoSistemas\ProgPleno\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.csproj.CoreCompileInputs.cache
+E:\Projects\FuncaoSistemas\ProgPleno\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.dll
+E:\Projects\FuncaoSistemas\ProgPleno\FI.WebAtividadeEntrevista\FI.AtividadeEntrevista\obj\Debug\FI.AtividadeEntrevista.pdb

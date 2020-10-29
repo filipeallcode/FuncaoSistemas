@@ -2,6 +2,7 @@
 $(document).ready(function () {
 
     if (document.getElementById("gridBeneficiarios"))
+        HTMLDocument.
         $('#gridBeneficiarios').jtable({
             title: 'Beneficiarios',
             paging: true, //Enable paging
@@ -13,17 +14,23 @@ $(document).ready(function () {
             },
             fields: {
                 Nome: {
-                    title: 'Nome',
-                    width: '50%'
+                    title: 'CPF',
+                    width: '40%'
                 },
                 Email: {
-                    title: 'Email',
-                    width: '35%'
+                    title: 'Nome',
+                    width: '40%'
                 },
                 Alterar: {
                     title: '',
                     display: function (data) {
                         return '<button onclick="window.location.href=\'' + urlAlteracao + '/' + data.record.Id + '\'" class="btn btn-primary btn-sm">Alterar</button>';
+                    }
+                },
+                Excluir: {
+                    title: '',
+                    display: function (data) {
+                        return '<button onclick="window.location.href=\'' + urlAlteracao + '/' + data.record.Id + '\'" class="btn btn-primary btn-sm">Excluir</button>';
                     }
                 }
             }

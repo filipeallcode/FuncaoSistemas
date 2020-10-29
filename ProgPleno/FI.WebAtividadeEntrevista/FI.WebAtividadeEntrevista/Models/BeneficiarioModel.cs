@@ -7,6 +7,9 @@ using System.Web;
 
 namespace WebAtividadeEntrevista.Models
 {
+    /// <summary>
+    /// Classe de Modelo de Beneficiario
+    /// </summary>
     public class BeneficiarioModel
     {
         public long Id { get; set; }

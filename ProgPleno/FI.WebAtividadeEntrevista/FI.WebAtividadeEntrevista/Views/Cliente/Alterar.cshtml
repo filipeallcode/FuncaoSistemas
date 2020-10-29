@@ -1,4 +1,5 @@
 ﻿@model WebAtividadeEntrevista.Models.ClienteModel
+
 @{
     ViewBag.Title = "Alterar Cliente";
 }
@@ -10,9 +11,13 @@
             $("#CEP").inputmask("mask", { "mask": "99999-999" });
             $("#CPFBeneficiario").inputmask("mask", { "mask": "999.999.999-99" }, { reverse: true });
         });
-        var urlPost = '@Url.Action("Alterar", "Cliente", new { area = "" })';
-        var obj = @Html.Raw(Json.Encode(Model));
+        var urlPostCliente = '@Url.Action("Alterar", "Cliente", new { area = "" })';
+        var urlPostBeneficiario = '@Url.Action("Alterar", "Beneficiario", new { area = "" })';
+        var objCliente = @Html.Raw(Json.Encode(Model));
+        var objBeneficiario = @Html.Raw(Json.Encode(Model));
         var urlRetorno = '@Url.Action("Index", "Cliente", new { area = "" })';
+        var urlAlteracao = '@Url.Action("Alterar", "Cliente", new { area = "" })';
+        var urlClienteList = '@Url.Action("ClienteList", "Cliente", new { area = "" })';
     </script>
     @Scripts.Render("~/bundles/altClientes")
     @Scripts.Render("~/bundles/inputmask")
