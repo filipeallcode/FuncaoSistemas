@@ -1,5 +1,4 @@
 ﻿CREATE PROC FI_SP_PesqBeneficiario
-	@idcliente bigint,
 	@iniciarEm int,
 	@quantidade int,
 	@campoOrdenacao varchar(200),
@@ -25,7 +24,7 @@ BEGIN
 	'SELECT ID, NOME, CPF, IDCLIENTE FROM
 		(SELECT ROW_NUMBER() OVER (ORDER BY ' + @ORDER + ') AS Row, ID, NOME, CPF, IDCLIENTE FROM BENEFICIARIOS WITH(NOLOCK))
 		AS BenefiriariosWithRowNumbers
-	WHERE IDCLIENTE = @idcliente AND Row > @iniciarEm AND Row <= (@iniciarEm+@quantidade) ORDER BY'
+	WHERE Row > @iniciarEm AND Row <= (@iniciarEm+@quantidade) ORDER BY'
 	
 	SET @SCRIPT = @SCRIPT + @ORDER
 			
