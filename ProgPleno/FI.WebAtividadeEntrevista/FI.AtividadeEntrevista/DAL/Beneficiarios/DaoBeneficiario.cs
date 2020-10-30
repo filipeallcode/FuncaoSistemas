@@ -60,24 +60,17 @@ namespace FI.AtividadeEntrevista.DAL
             return ds.Tables[0].Rows.Count > 0;
         }
 
-        internal List<Beneficiario> Pesquisa(int iniciarEm, int quantidade, string campoOrdenacao, bool crescente, out int qtd)
+        /// <summary>
+        /// Pesquisa todos os beneficiarios pelo IdCliente
+        /// </summary>
+        internal List<DML.Beneficiario> Pesquisa(long idCliente)
         {
             List<System.Data.SqlClient.SqlParameter> parametros = new List<System.Data.SqlClient.SqlParameter>();
 
-            parametros.Add(new System.Data.SqlClient.SqlParameter("iniciarEm", iniciarEm));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("quantidade", quantidade));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("campoOrdenacao", campoOrdenacao));
-            parametros.Add(new System.Data.SqlClient.SqlParameter("crescente", crescente));
+            parametros.Add(new System.Data.SqlClient.SqlParameter("IdCliente", idCliente));
 
-            DataSet ds = base.Consultar("FI_SP_PesqBeneficiario", parametros);
+            DataSet ds = base.Consultar("FI_SP_PesqBeneficiariosPorCliente", parametros);
             List<DML.Beneficiario> ben = Converter(ds);
-
-            int iQtd = 0;
-
-            if (ds.Tables.Count > 1 && ds.Tables[1].Rows.Count > 0)
-                int.TryParse(ds.Tables[1].Rows[0][0].ToString(), out iQtd);
-
-            qtd = iQtd;
 
             return ben;
         }
