@@ -42,33 +42,40 @@ namespace WebAtividadeEntrevista.Controllers
             }
         }
 
-        [HttpPost]
-        public JsonResult BeneficiarioList(int jtStartIndex = 0, int jtPageSize = 0, string jtSorting = null)
+        //[HttpGet]
+        public JsonResult BeneficiarioList(long idCliente)
         {
             try
             {
-                int qtd = 0;
-                string campo = string.Empty;
-                string crescente = string.Empty;
-                string[] array = jtSorting.Split(' ');
+                List<Beneficiario> beneficiarios = new BoBeneficiario().Pesquisa(idCliente);
+                BeneficiarioModel model = null;
 
-                if (array.Length > 0)
-                    campo = array[0];
+                List<BeneficiarioModel> models = new List<BeneficiarioModel>();
 
-                if (array.Length > 1)
-                    crescente = array[1];
-
-                long idCliente = 17;
-
-                List<Beneficiario> beneficiarios = new BoBeneficiario().Pesquisa(idCliente, jtStartIndex, jtPageSize, campo, crescente.Equals("ASC", StringComparison.InvariantCultureIgnoreCase), out qtd);
-
+                if (beneficiarios != null)
+                {
+                    foreach (var item in beneficiarios)
+                    {
+                        model = new BeneficiarioModel()
+                        {
+                            Nome = item.Nome,
+                            CPF = item.CPF,
+                            Id = item.Id,
+                            IdCliente = item.IdCliente
+                        };
+                        
+                        models.Add(model);
+                    }
+                }
                 //Return result to jTable
-                return Json(new { Result = "OK", Records = beneficiarios, TotalRecordCount = qtd });
+                return Json(models, JsonRequestBehavior.AllowGet);
             }
             catch (Exception ex)
             {
                 return Json(new { Result = "ERROR", Message = ex.Message });
             }
+            
         }
+
     }
 }
