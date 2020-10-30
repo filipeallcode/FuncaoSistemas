@@ -40,7 +40,7 @@ function ModalDialog(titulo, texto) {
         '                    <p>' + texto + '</p>                                                                           ' +
         '                </div>                                                                                             ' +
         '                <div class="modal-footer">                                                                         ' +
-        '                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>             ' +
+        '                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="return PesqBeneficiario();">Fechar</button>             ' +
         '                                                                                                                   ' +
         '                </div>                                                                                             ' +
         '            </div><!-- /.modal-content -->                                                                         ' +
